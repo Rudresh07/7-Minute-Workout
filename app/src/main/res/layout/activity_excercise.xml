@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExcerciseActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv2ndScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET READY FOR"
+        android:textColor="@color/dark_green"
+        android:textSize="@dimen/btn_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/flTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/flTimer"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonborder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:background="@drawable/progress_bar_circular_grey"
+            android:layout_gravity="center"
+            android:progressDrawable="@drawable/progress_bar_circular"
+            android:max="10"
+            android:indeterminate="false"
+            android:progress="100"
+            android:rotation="-90"/>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/item_circular_dark_green_background">
+
+            <TextView
+                android:id="@+id/timerCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
